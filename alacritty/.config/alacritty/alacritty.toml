@@ -7,8 +7,8 @@ TERM = "xterm-256color"
 padding.x = 10
 padding.y = 10
 decorations = "Buttonless"
-opacity = 0.65
-blur = true
+# opacity = 0.73
+# blur = true
 option_as_alt = "Both"
 
 [font]
