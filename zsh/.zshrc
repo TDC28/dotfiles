@@ -11,6 +11,7 @@ export PATH=$BREWPATH:$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PATH="/opt/homebrew/bin":$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
+export BAT_THEME="tokyonight_night"
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
