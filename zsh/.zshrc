@@ -1,16 +1,3 @@
-# Homebrew setup
-if [[ $(uname -m) == 'arm64' ]]; then
-    BREWPATH=/opt/homebrew/bin
-else
-    BREWPATH=/usr/local/bin
-fi
-
-export HOMEBREW_NO_AUTO_UPDATE=1
-export EDITOR=nvim
-export PATH=$BREWPATH:$PATH
-export PATH="$HOME/.local/bin":$PATH
-export PATH="/opt/homebrew/bin":$PATH
-export XDG_CONFIG_HOME="$HOME/.config"
 export BAT_THEME="tokyonight_night"
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
@@ -19,10 +6,10 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --layout=reverse \
   --border=none
   --color=bg+:#283457 \
-  --color=bg:#1a1b26 \
+  --color=bg:-1\
   --color=border:#27a1b9 \
   --color=fg:#c0caf5 \
-  --color=gutter:#16161e \
+  --color=gutter:-1\
   --color=header:#ff9e64 \
   --color=hl+:#2ac3de \
   --color=hl:#2ac3de \
@@ -39,16 +26,20 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # Aliases
 alias vim='nvim'
 alias penv='source .venv/bin/activate'
-alias newpenv='python3 -m venv .venv'
+alias npenv='python3 -m venv .venv'
 alias gcl='git clone'
 alias gco='git checkout'
+alias gp='git pull'
+alias gP='git push'
 alias lg='lazygit'
 alias cat='bat'
 alias ls='eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions'
 alias tree='eza -T --color=always --icons=always'
 alias cd='z'
+alias tma='tmux attach'
+alias tmd='tmux detach'
 
-# zsh uatosuggestions and syntax highlightingg
+# zsh zsh-autosuggestions and syntax highlightingg
 source ~/.custom_cmds.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
