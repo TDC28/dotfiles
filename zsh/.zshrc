@@ -1,4 +1,6 @@
 export BAT_THEME="tokyonight_night"
+export ALACRITTY_CONFIG_FILE="$HOME/.config/alacritty/alacritty_light.toml"
+export PYTHONDONTWRITEBYTECODE=1
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
@@ -34,12 +36,15 @@ alias gP='git push'
 alias lg='lazygit'
 alias cat='bat'
 alias ls='eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions'
-alias tree='eza -T --color=always --icons=always'
+alias tree='eza -T --color=always --icons=always --no-git'
 alias cd='z'
 alias tma='tmux attach'
 alias tmd='tmux detach'
+alias tmk='tmux kill-server'
+alias neofetch='fastfetch'
+alias wp='which pip'
 
-# zsh zsh-autosuggestions and syntax highlightingg
+# zsh zsh-autosuggestions and syntax highlighting
 source ~/.custom_cmds.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -58,4 +63,4 @@ bindkey "^[[B" history-search-forward
 
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
+eval "$(oh-my-posh init zsh --config )"

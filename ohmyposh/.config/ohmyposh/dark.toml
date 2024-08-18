@@ -11,7 +11,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     type = "path"
     style = "plain"
     background = "transparent"
-    foreground = "#4173D3"
+    foreground = "#02BEFF"
     template = '{{ .Path }}'
 
     [blocks.segments.properties]
@@ -20,7 +20,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'git'
     style = 'plain'
-    foreground = '#000000'
+    foreground = 'green'
     background = 'transparent'
     template = " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
 
@@ -46,10 +46,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = "alexandreboutot %"
 
 [transient_prompt]
-  background = 'transparent'
   foreground_templates = [
       "{{if gt .Code 0}}red{{end}}",
       "{{if eq .Code 0}}green{{end}}",
   ]
+  background = 'transparent'
   template = 'alexandreboutot % '
-
