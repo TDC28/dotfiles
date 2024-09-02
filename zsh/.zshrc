@@ -37,3 +37,7 @@ bindkey "^[[B" history-search-forward
 
 eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
+
+tmux-git-autofetch() {(/Users/alexandreboutot/dotfiles/tmux/.tmux/plugins/tmux-git-autofetch/git-autofetch.tmux --current &)}
+add-zsh-hook chpwd tmux-git-autofetch
+    
