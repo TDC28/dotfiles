@@ -5,13 +5,13 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
-  newline = true
+  newline = true 
 
   [[blocks.segments]]
     type = "path"
     style = "plain"
     background = "transparent"
-    foreground = "#4173D3"
+    foreground = "#02BEFF"
     template = '{{ .Path }}'
 
     [blocks.segments.properties]
@@ -20,36 +20,32 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'git'
     style = 'plain'
-    foreground = '#000000'
+    foreground = 'green'
     background = 'transparent'
     template = " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
 
     [blocks.segments.properties]
     fetch_status = true
     fetch_upstream_icon = true
-      branch_icon = ''
+    branch_icon = ''
     
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
-  newline = true
+  newline = true  # Change to true to start a new line after the path and Git status
 
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}green{{end}}",
-    ]
+    foreground = 'green'
     background = 'transparent'
-    template = "alexandreboutot %"
+    template = "{{ .UserName }} %"
 
 [transient_prompt]
-  background = 'transparent'
   foreground_templates = [
       "{{if gt .Code 0}}red{{end}}",
       "{{if eq .Code 0}}green{{end}}",
   ]
-  template = 'alexandreboutot % '
-
+  background = 'transparent'
+  template = '{{ .UserName }} % '
