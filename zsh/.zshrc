@@ -25,7 +25,6 @@ alias tmns='tmuxifier new-session'
 alias neofetch='fastfetch'
 alias wp='which pip'
 
-# zsh zsh-autosuggestions and syntax highlighting
 source ~/.custom_cmds.sh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
