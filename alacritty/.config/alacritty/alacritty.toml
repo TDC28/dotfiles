@@ -9,9 +9,7 @@ TERM = "xterm-256color"
 padding.x = 10
 padding.y = 10
 decorations = "Buttonless"
-opacity = 0.9
 option_as_alt = "Both"
-blur = true
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"
