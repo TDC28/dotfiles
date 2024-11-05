@@ -1,0 +1,34 @@
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+    
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    foreground = "#000000"
+    background = 'transparent'
+    template = "{{ .UserName }}@{{ .HostName }} "
+
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    type = "path"
+    style = "plain"
+    background = "transparent"
+    template = '{{ .Path }} % '
+
+    [blocks.segments.properties]
+      style = "full"
+  
+# [transient_prompt]
+#   background = 'transparent'
+#   foreground = 'green'
+#   template = '{{ .UserName }} % '
