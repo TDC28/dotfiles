@@ -13,7 +13,7 @@ alias gm='git merge'
 alias gp='git pull'
 alias gP='git push'
 alias lg='lazygit'
-alias ls='eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions'
+# alias ls='eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions'
 alias tree='eza -T --color=always --icons=always --no-git'
 alias cd='z'
 alias tma='tmux attach'
@@ -41,5 +41,4 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 eval "$(zoxide init zsh)"
-eval "$(tmuxifier init -)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"

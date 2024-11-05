@@ -7,6 +7,12 @@ final_space = true
   alignment = 'left'
 
   [[blocks.segments]]
+    type = 'python'
+    style = 'plain'
+    template = '({{ .Venv }}) '
+
+
+  [[blocks.segments]]
     style = 'plain'
     template = '{{ .UserName }}@{{ .HostName }} '
     foreground = '#000000'
@@ -19,7 +25,7 @@ final_space = true
 
   [[blocks.segments]]
     style = 'plain'
-    template = '{{ .Path }} % '
+    template = '{{ .Path }} %'
     foreground = '#000000'
     background = 'transparent'
     type = 'path'
