@@ -3,32 +3,32 @@ version = 3
 final_space = true
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
+type = 'prompt'
+alignment = 'left'
 
-  [[blocks.segments]]
-    type = 'python'
-    style = 'plain'
-    template = '({{ .Venv }}) '
+[[blocks.segments]]
+type = 'python'
+style = 'plain'
+template = '({{ .Venv }}) '
 
 
-  [[blocks.segments]]
-    style = 'plain'
-    template = '{{ .UserName }}@{{ .HostName }} '
-    foreground = '#000000'
-    background = 'transparent'
-    type = 'text'
+[[blocks.segments]]
+style = 'plain'
+template = '{{ .UserName }}@{{ .HostName }} '
+foreground = '#000000'
+background = 'transparent'
+type = 'text'
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
+type = 'prompt'
+alignment = 'left'
 
-  [[blocks.segments]]
-    style = 'plain'
-    template = '{{ .Path }} %'
-    foreground = '#000000'
-    background = 'transparent'
-    type = 'path'
+[[blocks.segments]]
+style = 'plain'
+template = '{{ .Path }} %'
+foreground = '#000000'
+background = 'transparent'
+type = 'path'
 
-    [blocks.segments.properties]
-      style = 'full'
+[blocks.segments.properties]
+style = 'full'
