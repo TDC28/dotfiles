@@ -13,4 +13,4 @@ size = 12
 
 [general]
 live_config_reload = true
-import = ["~/.config/alacritty/tokyonight_storm.toml"]
+import = ["~/.config/alacritty/gruvbox_dark.toml"]
