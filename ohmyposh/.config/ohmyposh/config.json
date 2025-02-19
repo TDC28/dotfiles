@@ -12,7 +12,7 @@
         {
           "type": "session",
           "style": "plain",
-          "template": "{{ .UserName }} | "
+          "template": "{{ .UserName }}@{{ .HostName }} | "
         },
         {
           "properties": {
@@ -20,7 +20,8 @@
           },
           "style": "plain",
           "template": "󰉋  {{ .Path }}",
-          "type": "path"
+          "type": "path",
+          "foreground": "#b8bb26"
         },
         {
           "properties": {
@@ -31,7 +32,7 @@
           "type": "git"
         },
         {
-          "foreground": "#BF616A",
+          "foreground": "#cc241d",
           "style": "plain",
           "template": " \u2717",
           "type": "status"
