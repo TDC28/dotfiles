@@ -6,6 +6,7 @@ padding.x = 3
 padding.y = 3
 # decorations = "Buttonless"
 option_as_alt = "Both"
+# opacity = 0.95
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"
